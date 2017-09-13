@@ -1,4 +1,7 @@
-
+# Call it from your current project. It will find all of the coffee files
+# in your project in all remote open branches, and remove them from a list
+# of existing coffee files. That way you can modernize those remaining to
+# typescript without stepping on the feet of other developers
 branches = `git branch -r`.split("\n").
               map(&:strip).
               reject{|item| item['HEAD'] }
